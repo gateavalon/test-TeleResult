@@ -84,7 +84,6 @@ describe("test on restful API", function () {
       customer: "customer-7",
     };
     const res = await request(app).post("/orders").send(orderPost);
-    console.log(res);
     expect(res.body).toMatchObject({
       message: "order already exists",
     });
